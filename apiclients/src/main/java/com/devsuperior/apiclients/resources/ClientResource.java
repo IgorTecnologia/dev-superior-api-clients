@@ -12,7 +12,7 @@ import com.devsuperior.apiclients.entities.Client;
 import com.devsuperior.apiclients.services.ClientService;
 
 @RestController
-@RequestMapping(value = "/Clients")
+@RequestMapping(value = "/clients")
 public class ClientResource {
 
 	
