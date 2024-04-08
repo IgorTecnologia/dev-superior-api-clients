@@ -3,8 +3,8 @@ package com.devsuperior.apiclients.entities;
 import java.time.Instant;
 import java.util.Objects;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_clients")
