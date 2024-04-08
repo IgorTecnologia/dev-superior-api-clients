@@ -34,7 +34,7 @@ public class ClientService {
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id){
 		Optional <Client> obj = repository.findById(id);
-		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found " + id));
+		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found: " + id));
 		return new ClientDTO(entity);
 	}
 	
@@ -57,7 +57,7 @@ public class ClientService {
 			entity = repository.save(entity);
 			return new ClientDTO(entity);
 		}catch(EntityNotFoundException e) {
-			throw new ResourceNotFoundException("Entity not found " + id);
+			throw new ResourceNotFoundException("Entity not found: " + id);
 		}
 		
 	}
