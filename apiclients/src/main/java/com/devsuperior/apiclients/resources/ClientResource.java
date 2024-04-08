@@ -27,7 +27,7 @@ public class ClientResource {
 	@Autowired
 	private ClientService service;
 	@GetMapping
-	public ResponseEntity<Page<ClientDTO>> findAll(
+	public ResponseEntity<Page<ClientDTO>> findAllPaged(
 			@RequestParam(value = "page", defaultValue = "0") Integer page,
 			@RequestParam(value = "linesPerPage", defaultValue = "6") Integer linesPerPage,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
