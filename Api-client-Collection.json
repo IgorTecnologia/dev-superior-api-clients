@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "8b9b8eef-dfc9-434e-8d75-d85d46c6684f",
+		"name": "Api-client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30344579",
+		"_collection_link": "https://i-dont-know-4771.postman.co/workspace/Dev-superior-bootcamp~df436fee-70b2-41d8-b5bd-8c4174d08d70/collection/30344579-8b9b8eef-dfc9-434e-8d75-d85d46c6684f?action=share&source=collection_link&creator=30344579"
+	},
+	"item": [
+		{
+			"name": "All Clients Paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/clients?page=1&linesPerPage=6&direction=ASC&orderBy=id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"clients"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "linesPerPage",
+							"value": "6"
+						},
+						{
+							"key": "direction",
+							"value": "ASC"
+						},
+						{
+							"key": "orderBy",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/clients/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\" : \"Igor Gonçalves\",\r\n\"cpf\" : \"123.456.789-10\",\r\n\"income\" : 5000.00,\r\n\"birthDate\" : \"1998-01-31T18:50:07.12345Z\",\r\n\"children\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/clients"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"João Silva - new name\",\r\n    \"cpf\": \"123.456.789-10\",\r\n    \"income\": 2200.16,\r\n    \"birthDate\": \"1992-06-10T20:50:07.123450Z\",\r\n    \"children\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/clients/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{host}}/clients/1"
+			},
+			"response": []
+		}
+	]
+}
